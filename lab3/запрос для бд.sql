@@ -1,0 +1,8 @@
+USE master
+GO
+CREATE database E_MyBase2
+ ON  PRIMARY 
+( NAME = N'E_MyBase2_mdf', FILENAME = N'L:\BD\E_MyBase2.mdf' , SIZE = 10240KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'E_MyBase2_log', FILENAME = N'L:\BD\E_MyBase2_log.ldf' , SIZE = 10240KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
