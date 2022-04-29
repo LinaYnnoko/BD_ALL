@@ -3,6 +3,7 @@
 use UNIVER;
 
 -- Задание 1
+use UNIVER;
 GO
 CREATE VIEW [Преподаватель]
  AS SELECT TEACHER [код],
