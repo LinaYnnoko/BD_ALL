@@ -1,4 +1,5 @@
--- Задание 1
+
+-- Задание 1 
 
 use UNIVER;
 exec sp_helpindex 'AUDITORIUM'
@@ -36,6 +37,7 @@ checkpoint;
 DBCC DROPCLEANBUFFERS;
 
 CREATE clustered index ##EXAMPLE_1_CL on #EXPLRE(TIND asc);
+DROP index ##EXAMPLE_1_CL on #EXPLRE;
 
 SELECT *
 FROM #EXPLRE
@@ -107,7 +109,7 @@ checkpoint;
 DBCC DROPCLEANBUFFERS;
 
 GO
-CREATE index ##EXAMPLE_4_CL on #EXAMPLE_4(EX) where (EX>=500 and EX<1000);
+CREATE index ##EXAMPLE_4_CL on #EXAMPLE_4(EX) where (EX>=500 and EX<=1000);
 SELECT *FROM #EXAMPLE_4 where EX between 500 and 1000 order by EX;
 
 
